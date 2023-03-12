@@ -7,4 +7,6 @@ public class DatosGuardados
 {
     public Vector3 posicion;
     public int Vida;
+    public int Armadura;
+    public int Energia;
 }

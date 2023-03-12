@@ -43,6 +43,8 @@ public class ControladorDatos : MonoBehaviour
             //ayuda a actualizar la posicion de nuestro jugador cuando le damos la tecla C (de cargar)
             jugador.transform.position = datosjuego.posicion;
             jugador.GetComponent<VidaJugador>().Cantidadvida = datosjuego.Vida;
+            jugador.GetComponent<ArmaduraJugador>().CantidadArmadura = datosjuego.Armadura;
+            jugador.GetComponent<EnergíaJugador>().CantidadEnergia = datosjuego.Energia;
         }
         else
         {
@@ -56,7 +58,10 @@ public class ControladorDatos : MonoBehaviour
         DatosGuardados nuevosDatos = new DatosGuardados()
         {
             posicion = jugador.transform.position,
-            Vida = jugador.GetComponent<VidaJugador>().Cantidadvida
+            Vida = jugador.GetComponent<VidaJugador>().Cantidadvida,
+            Armadura = jugador.GetComponent<ArmaduraJugador>().CantidadArmadura,
+            Energia = jugador.GetComponent<EnergíaJugador>().CantidadEnergia,
+
         };
         string cadenaJSON = JsonUtility.ToJson(nuevosDatos);
         File.WriteAllText(archivosdeGuardado, cadenaJSON);
