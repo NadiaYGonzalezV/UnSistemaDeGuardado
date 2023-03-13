@@ -7,6 +7,8 @@ public class EnergíaJugador : MonoBehaviour
 {
     public int CantidadEnergia;
     public Slider barradeEnergia;
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +21,8 @@ public class EnergíaJugador : MonoBehaviour
         barradeEnergia.value = CantidadEnergia;
         //if (CantidadEnergia <= 0)
         //{
-        //    Destroy(gameObject);
+        //    Destroy(gameObject); Es responsable de destruir el objeto (no se vera en pantalla)
         //}
     }
+    
 }

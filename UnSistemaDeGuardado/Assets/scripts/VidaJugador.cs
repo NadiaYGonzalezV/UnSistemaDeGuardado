@@ -20,9 +20,9 @@ public class VidaJugador : MonoBehaviour
     void Update()
     {
         barradevida.value = Cantidadvida;
-        if ( Cantidadvida <= 0)
-        {
-            Destroy(gameObject);
-        }
+        //if ( Cantidadvida <= 0)
+        //{
+        //    Destroy(gameObject);
+        //}
     }
 }
