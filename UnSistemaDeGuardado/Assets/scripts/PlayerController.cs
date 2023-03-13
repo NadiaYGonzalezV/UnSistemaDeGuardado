@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private Rigidbody2D rb2D;
+    private Rigidbody2D rb2D; //le otorga gravedad y otros eleementos que ayudaran a nuestro personaje
 
     [Header("Movimiento")]
 
@@ -24,6 +24,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Vector3 dimensiondeCaja;
     [SerializeField] private bool enSuelo;
     private bool salto = false; 
+
+    //LaSerializeField sirve para mostrar las variables en el inspector 
+    //y poder modificarlas aunque sean privadas.
 
 
     private void Start()
@@ -54,6 +57,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    //Para que nuestro personaje se mueva
     private void Mover (float mover, bool saltar)
     {
         Vector3 velocidadObjetivo = new Vector2(mover, rb2D.velocity.y);
@@ -82,6 +86,7 @@ public class PlayerController : MonoBehaviour
         transform.localScale = escala;
     }
 
+    //es para que el salto salga mejor ejecutado 
     private void OnDrawGizmos()
     {
             Gizmos.color = Color.yellow;

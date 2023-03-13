@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.IO;
+using System.IO; //Recuerda agregar esta funcion para que tu sistema funcione bien.
 
 public class ControladorDatos : MonoBehaviour
 {
@@ -14,11 +14,12 @@ public class ControladorDatos : MonoBehaviour
     {
         archivosdeGuardado = Application.dataPath + "/datosJuego.json";
         jugador = GameObject.FindGameObjectWithTag("player");
-        //ayudara a que cuando inicie el juego nuestro personaje aparecera en l ultima posicion guardada 
+        //ayudara a que cuando inicie el juego nuestro personaje aparecera en la ultima posicion guardada 
         CargarDatos();
     }
 
     private void Update()
+
     //las teclas que haran la funcion de guardado y carga
     {
         if (Input.GetKeyDown(KeyCode.C))
@@ -32,6 +33,8 @@ public class ControladorDatos : MonoBehaviour
         }
 
     }
+
+    //Los datos que seran guardados
     private void CargarDatos()
     {
         if (File.Exists(archivosdeGuardado))
@@ -40,19 +43,26 @@ public class ControladorDatos : MonoBehaviour
             datosjuego = JsonUtility.FromJson <DatosGuardados>(contenido);
 
             Debug.Log("Posicion Jugador: " + datosjuego.posicion);
+
             //ayuda a actualizar la posicion de nuestro jugador cuando le damos la tecla C (de cargar)
             jugador.transform.position = datosjuego.posicion;
+
+            //Asi mismo, los siguientes parrafos cargaran los datos de vida, armadura y energia
             jugador.GetComponent<VidaJugador>().Cantidadvida = datosjuego.Vida;
             jugador.GetComponent<ArmaduraJugador>().CantidadArmadura = datosjuego.Armadura;
             jugador.GetComponent<EnergíaJugador>().CantidadEnergia = datosjuego.Energia;
         }
         else
         {
+            //en el caso de no haber guardado nada aparecera el siguiente mensaje en la consola
+
             Debug.Log("El archivo no existe");
 
             
         }
     }
+
+    //Aqui sera la forma en la que se guardaran los datos de todos nuestros elementos
     private void GuardarDatos()
     {
         DatosGuardados nuevosDatos = new DatosGuardados()
@@ -65,7 +75,7 @@ public class ControladorDatos : MonoBehaviour
         };
         string cadenaJSON = JsonUtility.ToJson(nuevosDatos);
         File.WriteAllText(archivosdeGuardado, cadenaJSON);
-        Debug.Log("Archivo Guardado");
+        Debug.Log("Archivo Guardado"); //Mensaje que aparecera al momento de guardar los datos y haberlos modificado
     }
 
     //Este script nos ayuda a que cada vez que guardemos nuestro personaje reparecera en dicha posicion donde guardamos
