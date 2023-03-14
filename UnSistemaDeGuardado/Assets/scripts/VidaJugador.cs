@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.UI; //no olvides agregar esta funcion para que todo funcione perfectamente
 
 public class VidaJugador : MonoBehaviour
 {
@@ -19,7 +19,7 @@ public class VidaJugador : MonoBehaviour
     //El update lee constantemente los datos escritos 
     void Update()
     {
-        barradevida.value = Cantidadvida; //Sirve para conectar el slider con la cantidad que buscas representar en pantalla
+      barradevida.value = Cantidadvida; //Sirve para conectar el slider con la cantidad que buscas representar en pantalla
                                           //con este mismo Slider.
 
         //Este ultimo fragmento de codigo convertido en comentario sirve para que al momento de llegar a cero, tu personaje desaparezca

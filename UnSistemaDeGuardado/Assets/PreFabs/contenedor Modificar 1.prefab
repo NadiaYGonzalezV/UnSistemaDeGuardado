@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &673540269354209151
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 673540269354209149}
+  - component: {fileID: 673540269354209148}
+  - component: {fileID: 673540269354209027}
+  - component: {fileID: 673540269354209026}
+  m_Layer: 0
+  m_Name: contenedor Modificar 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &673540269354209149
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673540269354209151}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.5134988, y: -1.2282661, z: 0.1448852}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &673540269354209148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673540269354209151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614dbbc7fc6ced3458a477806c4c2d1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetoModificadorA: {fileID: 0}
+  barradearmadura: {fileID: 0}
+  botonAumentar: {fileID: 0}
+  botonReducir: {fileID: 0}
+--- !u!114 &673540269354209027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673540269354209151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f13553ad5c9cc1d4db57f492fb1f92d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetoModificadorV: {fileID: 0}
+  barradevida: {fileID: 0}
+  botonAumentar: {fileID: 0}
+  botonReducir: {fileID: 0}
+--- !u!114 &673540269354209026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673540269354209151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 997457424bc77644da5aede25281a1be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetoModificadorE: {fileID: 0}
+  barradeEnergia: {fileID: 0}
+  botonAumentar: {fileID: 0}
+  botonReducir: {fileID: 0}

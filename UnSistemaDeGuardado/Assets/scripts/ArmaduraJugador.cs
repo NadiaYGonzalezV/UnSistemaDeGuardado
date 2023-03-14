@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.UI;//recuerda agregar esta fucnion para que todo vaya bien.
 
 
 public class ArmaduraJugador : MonoBehaviour
