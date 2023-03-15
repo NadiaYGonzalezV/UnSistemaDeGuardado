@@ -5,14 +5,14 @@ using System.IO; //Recuerda agregar esta funcion para que tu sistema funcione bi
 
 public class ControladorDatos : MonoBehaviour
 {
-    public GameObject jugador;
+    public GameObject jugador; //objeto a quien le guardaran los datos
     public string archivosdeGuardado;
     //Nombre del script de "datosguardados"
     public DatosGuardados datosjuego = new DatosGuardados();
 
     private void Awake()
     {
-        archivosdeGuardado = Application.dataPath + "/datosJuego.json";
+        archivosdeGuardado = Application.dataPath + "/datosJuego.json"; //como se guardaran los datos
         jugador = GameObject.FindGameObjectWithTag("player");
         //ayudara a que cuando inicie el juego nuestro personaje aparecera en la ultima posicion guardada 
         CargarDatos();
